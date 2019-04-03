@@ -22,46 +22,50 @@
 </head>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
     <!-- Start  header-top-->
     <header class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
+        <div class="container-fluid px-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
                     <ul class="nav header-top-address">
                         <!--top-address-->
-                        <li class="nav-item"><a href="#" class="nav-link">Phone: 800.886.1995</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">E-mail: Sales@Tint-Pro.com</a></li>
+                        <li class="nav-item"><a href="#">Phone: 800.886.1995</a></li>
+                        <li class="nav-item"><a href="#">E-mail: Sales@Tint-Pro.com</a></li>
                     </ul>
                     <!--end top-address-->
                 </div>
-                <div class="col-md-5">
+                <div class="col-lg-7">
                     <div class="header-top-menu">
                         <!--header-top-menu-->
-                        <ul class="nav justify-content-end ">
-                            <li class="nav-item"><img src="images/3mlogo.png" alt="3mlogo-img">
+                        <ul class="nav justify-content-end">
+                            <li><img src="images/3mlogo.png" alt="3mlogo-img">
                             </li>
-                            <li class="nav-item">Authorized</li>
-                            <li class="nav-item"> window film</li>
-                            <li class="nav-item">dealer prestige</li>
-                            <li class="nav-item">dealer network</li>
+                            <li>Authorized</li>
+                            <li> window film</li>
+                            <li>dealer prestige</li>
+                            <li>dealer network</li>
+                            <li>
+                                <ul class="nav socail">
+                                    <!--socail--->
+                                    <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li class="nav-item"><a href="#" class="nav-link"><img src="images/fa-flickr.png" alt=""></a></li>
+                                    <!-- <i class="fab fa-flickr"></i>-->
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!--end header-top-menu-->
-                </div>
-                <div class="col-md-1">
-                    <ul class="nav no-gutters justify-content-end social-top">
-                        <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-flickr"></i></a></li>
-                    </ul>
                 </div>
             </div>
         </div>
     </header><!-- End  header-top-->
 
     <!--    Start-navbar-->
-    <nav class="navbar sticky-top navbar-expand-lg ">
-        <div class="container">
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container-fluid px-5">
             <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -95,26 +99,30 @@
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
                 </ul>
-
-                <div class="btn-group dropdown">
-                    <button type="button" class="dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="sr-only">Toggle Dropdown</span>
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <div class="dropdown-menu">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    </div>
-                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#search">
+                    <i class="fas fa-search"></i>
+                </button>
             </div>
         </div>
     </nav><!--    End-navbar-->
+    <!-- Modal -->
+    <div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
+            </div>
+        </div>
+    </div><!-- End Modal -->
 
     <!--    Start Banner-section-->
     <section class="banner-section">
-        <div class="container">
+        <div class="container-fluid px-5">
             <div class="banner">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-xl-7 col-md-6">
                         <div class="banner-content">
                             <h1>Residential</h1>
                             <hr>
@@ -122,33 +130,44 @@
                             <a href="#" class="btn btn-custom">Learn more</a>
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex justify-content-end">
-                        <div class="Serving-years align-self-end ">
-                            <p>Serving Delaware Brandywine
-                                and Lehigh Valleys</p>
-                            <img src="images/30years.png" alt="30years">
+                    <div class="col-xl-5 col-md-6 d-flex justify-content-end">
+                        <div class="serving-years align-self-end ">
+                            <ul class="nav serving-years-30">
+                                <li class="serving-years-30-text">Serving Delaware Brandywine and Lehigh Valleys</li>
+                                <li><img src="images/30years.png" class="img-fluid" alt="30years"></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!--    End Banner-section-->
+    </section><!--   End Banner-section-->
 
-    <!--    Start Banner-nav-tabs-section-->
-    <nav class="nav nav-tabs text-center">
-        <a href="#" class="nav nav-item nav-link col-md-6">Residential</a>
-        <a href="#" class="nav nav-item nav-link col-md-6">Commercial</a>
-    </nav><!--    End Banner-nav-tabs-section-->
-
-    <!--    Start recent-article-section-->
-    <section class="recent-article-section">
-        <div class="container d-flex justify-content-center">
-            <div class="recent-article-content">
-                <h2>recent article: Made in the shade</h2>
-                <img src="images/artical-logo.png" class="img-fluid" alt="artical-logo">
+    <!--   Start News-Item section-->
+    <section class="news-item">
+        <ul class="nav nav-pills nav-justified" id="pills-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Residential</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Commercial</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="recent-article-content">
+                    <h2>recent article: Made in the shade</h2>
+                    <img src="images/artical-logo.png" class="img-fluid" alt="artical-logo">
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="recent-article-content">
+                    <h2>recent article: Made in the shade</h2>
+                    <img src="images/artical-logo-2.png" class="img-fluid" alt="artical-logo">
+                </div>
             </div>
         </div>
-    </section><!--    End recent-article-section-->
+    </section><!--    End News-Item section-->
 
     <!--    Start 3M-Window-Films-section-->
     <section class="Window-Films-section">
@@ -234,19 +253,21 @@
                 <hr>
             </div>
             <div class="testimonials-content">
-                <div class="testimonials-img-left">
-                    <img src="images/quotation-left.png" class="img-fluid" alt="quotation-right">
+                <div class="testimonials-content">
+                    <div class="testimonials-img-left">
+                        <img src="images/quotation-left.png" class="img-fluid" alt="quotation-right">
+                    </div>
+                    <p>We wanted to thank you for doing such a great job installing the film on our windows. Most of all, we wanted to acknowledge what wonderful young people you are. In this day, we hear so much that the young people are not hard working or caring. That is so far from the truth with all of you. It was a pleasure to have you in our home.</p>
+                    <div class="testimonials-img-right">
+                        <img src="images/quotation-right.png" class="img-fluid" alt="quotation-right">
+                    </div>
+                    <h6>Sincerely, Barbara Lipsey</h6>
+                    <a href="#" class="btn btn-custom">Learn more</a>
                 </div>
-                <p>We wanted to thank you for doing such a great job installing the film on our windows. Most of all, we wanted to acknowledge what wonderful young people you are. In this day, we hear so much that the young people are not hard working or caring. That is so far from the truth with all of you. It was a pleasure to have you in our home.</p>
-                <div class="testimonials-img-right">
-                    <img src="images/quotation-right.png" class="img-fluid" alt="quotation-right">
-                </div>
-                <h6>Sincerely, Barbara Lipsey</h6>
-                <a href="#" class="btn btn-custom">Learn more</a>
-            </div>
-
+            </div> 
         </div>
     </section> <!--    End Testimonials-section-->
+    
 
     <!--    Start blog-section-->
     <section class="blog-section">
@@ -282,15 +303,17 @@
                 <hr>
             </div>
         </div>
-        <div class="container-fluid pt-5">
-            <div class="row">
-                <div class="col-md-9 no-padding">
+        <div class=" pt-5">
+            <div class="row  no-gutters">
+                <div class="col-md-9">
                     <!--Google map-->
-                    <div id="map"></div>
+                    <div class="embed-responsive embed-responsive-21by9">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7496148.936202814!2d85.84688993406172!3d23.4522038147851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2z4Kas4Ka-4KaC4Kay4Ka-4Kam4KeH4Ka2!5e0!3m2!1sbn!2sbd!4v1554291043229!5m2!1sbn!2sbd"></iframe>
+                    </div>
                 </div>
-                <div class="col-md-3 no-padding tint">
+                <div class="col-md-3 tint">
                     <div class="tint-content">
-                        <h2>Tint Pro</h2> 
+                        <h2>Tint Pro</h2>
                         <hr>
                         <ul class="list-unstyled address">
                             <li>400 W. Main St</li>
@@ -299,42 +322,173 @@
                             <li>Fx: (610) 409-855</li>
                         </ul>
                         <div class="contact-us">
-                        <p>Contact Us Today For a free Consultation and Price Estimate</p>
+                            <p>Contact Us Today For a free Consultation and Price Estimate</p>
+                        </div>
                     </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
     </section><!--    End contact-section-->
 
+    <!--    Start partners-section-->
+    <section class="partners-section">
+        <div class="container">
+            <div class="partners-content">
+                <h2>3M Association Partners</h2>
+                <img src="images/partners.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </section><!--    End partners-section-->
+
+    <!--    start-footer-section-->
+    <footer class="footer-section">
+        <div class="container-fluid px-5">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="footer-heading">
+                        <p>HOME</p>
+                        <ul class="footer-list list-unstyled no-gutters">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Angies List Reviews</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="footer-heading">
+                        <p>Residential</p>
+                        <ul class="footer-list list-unstyled no-gutters">
+                            <li><a href="#">Sun Control Films</a></li>
+                            <li><a href="#">Safety & Security Films</a></li>
+                            <li><a href="#">Fasara Decorative Films</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-heading">
+                        <p>Commercial</p>
+                        <ul class="footer-list list-unstyled no-gutters">
+                            <li><a href="#">Sun Control Films</a></li>
+                            <li><a href="#">Safety & Security Films</a></li>
+                            <li><a href="#">Fasara Decorative Films</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-heading">
+                        <p>Contact Us </p>
+                        <p>Blog</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer-heading footer-sales">
+                        <span>800.886.1995</span>
+                        <p>Sales@Tint-Pro.com</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="nav footer-heading footer-socail justify-content-end">
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-flickr"></i></a></li>
+
+                        <!--fb-like-->
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <div class="col-md-4">
+                    <form>
+                        <div class="form-row">
+                            <label for="inlineFormInputGroup">Service Areas search</label>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter city">
+                                <button type="submit" class="btn btn-primary">search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="technical-heading">
+                        <p>Technical Library</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-heading">
+                        <ul class="footer-list list-unstyled no-gutters">
+                            <li><a href="#">3M Documents</a></li>
+                            <li><a href="#">Frequently Asked Questions</a></li>
+                            <li><a href="#">3M Window Films Savings Calculators</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="footer-heading">
+                        <ul class="footer-list list-unstyled no-gutters">
+                            <li><a href="#">3M Window Film Videos</a></li>
+                            <li><a href="#">Sustainable Design</a></li>
+                            <li><a href="#">Reduce Fading</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-heading">
+                        <ul class="footer-list list-unstyled no-gutters">
+                            <li><a href="#">Energy Tax Credit</a></li>
+                            <li><a href="#">What's New</a></li>
+                            <li><a href="#">3M Window Film Simulators</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-years">
+                        <ul class="nav  footer-years-30">
+                            <li class="footer-years-30-text">Serving Delaware Brandywine and Lehigh Valleys</li>
+                            <li><img src="images/footer30years.png" class="img-fluid" alt="footer30years"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-top">
+            <div class="container-fluid px-5">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="copy-text">
+                            <p>&copy;Copyright 2011 | Tint-Pro</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="copy-right">
+                            <ul class="nav justify-content-end">
+                                <li class="nav-item"><a href="#" class="nav-link">3M Window Films</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link"> |&nbsp;&nbsp; Login</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link"> |&nbsp;&nbsp; Privacy Statement</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link"> |&nbsp;&nbsp; Terms Of Use</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--    End footer-section-->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-        $(function() {
-
-            function initMap() {
-
-                var location = new google.maps.LatLng(23.707310, 90.415482);
-
-                var mapCanvas = document.getElementById('map');
-                var mapOptions = {
-                    center: location,
-                    zoom: 16,
-                    panControl: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                }
-                var map = new google.maps.Map(mapCanvas, mapOptions);
-
-            }
-
-            google.maps.event.addDomListener(window, 'load', initMap);
-        });
-    </script>
+    <script></script>
 </body>
 
 </html>
