@@ -54,6 +54,9 @@ a:active{
     background: #fff;
     border:2px solid #e59700;
 }
+.navbar-nav .active > .nav-link, .navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .navbar-nav .show > .nav-link {
+	background: #e59700;
+}
 /*-----------------------------------------
 			01.header-top Css
 -----------------------------------------*/
@@ -101,7 +104,7 @@ a:active{
     padding: 0;
 }
 .dropdown-toggle::after {
-    content: none;
+   content: none;
 }
 .navbar-nav li a {
     color: #fff;
@@ -157,6 +160,10 @@ a:active{
     background: #0093A1;
      border-color: #00747F ;
 }
+.modal {
+    top: 11%;
+    left: 28%;
+}
 .btn-outline-success:hover.modal{
     display: block;
 }
@@ -168,7 +175,7 @@ a:active{
     background-repeat:no-repeat;
     background-size: cover;
     position: relative;
-/*    background-attachment: fixed;*/
+    background-attachment: fixed;
 }
 .banner-section:before{
     position: absolute;
@@ -194,8 +201,8 @@ a:active{
     padding-top: 120px;
 }
 .banner-content hr{
-    max-width: 4%;
-    height: 5px;
+    max-width: 40px;
+    height: 4px;
     background: #fff;
     margin-left: 0;
     margin: 30px 0;
@@ -280,8 +287,8 @@ a:active{
     text-transform:uppercase;
 }
 .Window-Films-content hr{
-    max-width: 3%;
-    height: 1px;
+    max-width: 30px;
+    height: 3px;
     background: #0093a1;
     margin: 30px auto;
 }
@@ -325,8 +332,8 @@ a:active{
     padding: 30px 0 20px;
 }
 .Window-designed-content hr{
-    max-width: 3%;
-    height: 1px;
+    max-width: 30px;
+    height: 2px;
     background: #fff;
 }
 .window-text{
@@ -374,9 +381,11 @@ a:active{
 /*-----------------------------------------
 			Testimonials-section Css
 -----------------------------------------*/
-.Testimonials-section{padding: 50px 0;}
+.Testimonials-section{
+    padding: 50px 0;
+}
 .heading{
-     
+    padding-top: 20px;
 }
 .heading h2{
      color:#0093a1;
@@ -385,8 +394,8 @@ a:active{
      font-size: 40px;
 }
 .heading hr{
-    max-width: 3%;
-    height: 1px;
+    max-width: 30px;
+    height: 2px;
     background: #0093a1;
 }
 .testimonials-content{
@@ -417,7 +426,34 @@ a:active{
     padding-bottom: 35px;
     padding-top: 10px;
 }
+.carousel-control-next, .carousel-control-prev {
+    width: 5% ;
+    color: #0093a1;
+    opacity: 0;
+}
+.Testimonials-section:hover .carousel-control-next,
+.Testimonials-section:hover .carousel-control-prev{
+     color: #0093a1;
+    opacity: .9;
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: -18%;
+}
+.carousel-indicators{
+        opacity: 0;
+}
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #1a6670;
 
+}
+.Testimonials-section:hover .carousel-indicators{
+     opacity: .9;
+}
 /*-----------------------------------------
 			blog-section Css
 -----------------------------------------*/
@@ -428,6 +464,14 @@ a:active{
     color:#0093a1;
     border: 2px solid #009ab6;
     padding: 20px 40px;
+    transform:scale(1);
+    
+    transition: all .4s ease;
+    
+}
+.blog-content:hover{
+    transform:scale(1.1);
+    box-shadow: 1px 1px 5px 3px #babebe94;
 }
 .blog-content h2{
     text-transform: uppercase;
@@ -474,7 +518,9 @@ a:active{
      border: 2px solid #fff;
      padding: 10px 15px;
 }
-.contact-us p{max-width: 160px;color: #ffffffd1;font-weight: 500;}
+.contact-us p{
+    color: #ffffffd1;
+    font-weight: 500;}
 
 /*-----------------------------------------
 			partners-section Css
@@ -507,6 +553,7 @@ a:active{
     font-size: 12px;
     text-transform: uppercase;
     line-height: 2.3;
+    margin-bottom: 10px;
 }
 .footer-heading span {
     font-size: 24px;
@@ -613,3 +660,23 @@ hr{
     text-transform:uppercase;
 }
 .copy-right ul li {}
+
+
+/*-----------------------------------------
+			scroll-top-Section Css
+-----------------------------------------*/
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 8px;
+    text-align:center;
+    line-height: 40px;
+    z-index: 999;
+    /*    display: none;*/
+    background-color: #00a2b6;
+}
+.scrollup i{
+    color:#E59700;
+}
